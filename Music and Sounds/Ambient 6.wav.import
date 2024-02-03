@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Ambient 6.wav-a28272dee27122203692c1baef96563e.sample"
+
+[deps]
+
+source_file="res://Music and Sounds/Ambient 6.wav"
+dest_files=[ "res://.import/Ambient 6.wav-a28272dee27122203692c1baef96563e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

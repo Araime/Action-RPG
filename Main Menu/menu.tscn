@@ -1,0 +1,258 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Main Menu/menu.gd" type="Script" id=1]
+[ext_resource path="res://Main Menu/Video.gd" type="Script" id=2]
+[ext_resource path="res://Main Menu/Audio.gd" type="Script" id=3]
+[ext_resource path="res://Music and Sounds/Swipe.wav" type="AudioStream" id=4]
+[ext_resource path="res://Music and Sounds/Ambient 3.wav" type="AudioStream" id=5]
+
+[node name="menu" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -66.0
+margin_right = 31.0
+margin_bottom = 46.0
+
+[node name="Menu" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 63.0
+margin_bottom = 124.0
+custom_constants/separation = 30
+
+[node name="Label" type="Label" parent="MarginContainer/Menu"]
+margin_right = 63.0
+margin_bottom = 14.0
+text = "Title"
+align = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Menu"]
+margin_top = 44.0
+margin_right = 63.0
+margin_bottom = 124.0
+custom_constants/separation = 10
+
+[node name="Play" type="Button" parent="MarginContainer/Menu/VBoxContainer"]
+margin_right = 63.0
+margin_bottom = 20.0
+text = "Play"
+
+[node name="Options" type="Button" parent="MarginContainer/Menu/VBoxContainer"]
+margin_top = 30.0
+margin_right = 63.0
+margin_bottom = 50.0
+text = "Options"
+
+[node name="Quit" type="Button" parent="MarginContainer/Menu/VBoxContainer"]
+margin_top = 60.0
+margin_right = 63.0
+margin_bottom = 80.0
+text = "Quit"
+
+[node name="Options" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -24.5
+margin_top = -40.0
+margin_right = 24.5
+margin_bottom = 4.0
+
+[node name="Video" type="Button" parent="Options/VBoxContainer"]
+margin_right = 49.0
+margin_bottom = 20.0
+text = "Video"
+
+[node name="Audio" type="Button" parent="Options/VBoxContainer"]
+margin_top = 24.0
+margin_right = 49.0
+margin_bottom = 44.0
+text = "Audio"
+
+[node name="BackFromOptions" type="Button" parent="Options"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -21.0
+margin_top = -30.0
+margin_right = 21.0
+margin_bottom = -10.0
+text = "Back"
+
+[node name="Video" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Video"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -48.5
+margin_top = -40.0
+margin_right = 48.5
+margin_bottom = 40.0
+
+[node name="Labels" type="VBoxContainer" parent="Video/HBoxContainer"]
+margin_right = 69.0
+margin_bottom = 80.0
+
+[node name="Fullscreen" type="Label" parent="Video/HBoxContainer/Labels"]
+margin_top = 5.0
+margin_right = 69.0
+margin_bottom = 19.0
+size_flags_vertical = 6
+text = "Fullscreen"
+
+[node name="Borderless" type="Label" parent="Video/HBoxContainer/Labels"]
+margin_top = 33.0
+margin_right = 69.0
+margin_bottom = 47.0
+size_flags_vertical = 6
+text = "Borderless"
+
+[node name="VSync" type="Label" parent="Video/HBoxContainer/Labels"]
+margin_top = 61.0
+margin_right = 69.0
+margin_bottom = 75.0
+size_flags_vertical = 6
+text = "VSync"
+
+[node name="Checks" type="VBoxContainer" parent="Video/HBoxContainer"]
+margin_left = 73.0
+margin_right = 97.0
+margin_bottom = 80.0
+
+[node name="Fullscreen" type="CheckBox" parent="Video/HBoxContainer/Checks"]
+margin_right = 24.0
+margin_bottom = 24.0
+
+[node name="Borderless" type="CheckBox" parent="Video/HBoxContainer/Checks"]
+margin_top = 28.0
+margin_right = 24.0
+margin_bottom = 52.0
+
+[node name="VSync" type="CheckBox" parent="Video/HBoxContainer/Checks"]
+margin_top = 56.0
+margin_right = 24.0
+margin_bottom = 80.0
+
+[node name="BackFromVideo" type="Button" parent="Video"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -21.0
+margin_top = -30.0
+margin_right = 21.0
+margin_bottom = -10.0
+text = "Back"
+
+[node name="Audio" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+sfx_audio_name = "SFX"
+mus_audio_name = "Music"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Audio"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -79.0
+margin_top = -28.0
+margin_right = 80.0
+margin_bottom = 14.0
+
+[node name="Music" type="AudioStreamPlayer" parent="Audio/HBoxContainer"]
+stream = ExtResource( 5 )
+volume_db = 10.0
+bus = "Music"
+
+[node name="SFX" type="AudioStreamPlayer" parent="Audio/HBoxContainer"]
+stream = ExtResource( 4 )
+bus = "SFX"
+
+[node name="Labels" type="VBoxContainer" parent="Audio/HBoxContainer"]
+margin_right = 58.0
+margin_bottom = 42.0
+
+[node name="Music" type="Label" parent="Audio/HBoxContainer/Labels"]
+margin_top = 2.0
+margin_right = 58.0
+margin_bottom = 16.0
+size_flags_vertical = 6
+text = "Music"
+
+[node name="Sound FX" type="Label" parent="Audio/HBoxContainer/Labels"]
+margin_top = 25.0
+margin_right = 58.0
+margin_bottom = 39.0
+size_flags_vertical = 6
+text = "Sound FX"
+
+[node name="Slider" type="VBoxContainer" parent="Audio/HBoxContainer"]
+margin_left = 62.0
+margin_right = 159.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+
+[node name="Music" type="HSlider" parent="Audio/HBoxContainer/Slider"]
+margin_right = 97.0
+margin_bottom = 16.0
+size_flags_vertical = 2
+max_value = 1.0
+step = 0.1
+value = 0.5
+
+[node name="SoundFX" type="HSlider" parent="Audio/HBoxContainer/Slider"]
+margin_top = 23.0
+margin_right = 97.0
+margin_bottom = 39.0
+size_flags_vertical = 2
+max_value = 1.0
+step = 0.1
+value = 0.5
+
+[node name="BackFromAudio" type="Button" parent="Audio"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -21.0
+margin_top = -30.0
+margin_right = 21.0
+margin_bottom = -10.0
+text = "Back"
+
+[connection signal="pressed" from="MarginContainer/Menu/VBoxContainer/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="MarginContainer/Menu/VBoxContainer/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="MarginContainer/Menu/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="Options/VBoxContainer/Video" to="." method="_on_Video_pressed"]
+[connection signal="pressed" from="Options/VBoxContainer/Audio" to="." method="_on_Audio_pressed"]
+[connection signal="pressed" from="Options/BackFromOptions" to="." method="_on_BackFromOptions_pressed"]
+[connection signal="toggled" from="Video/HBoxContainer/Checks/Fullscreen" to="Video" method="_on_Fullscreen_toggled"]
+[connection signal="toggled" from="Video/HBoxContainer/Checks/Borderless" to="Video" method="_on_Borderless_toggled"]
+[connection signal="toggled" from="Video/HBoxContainer/Checks/VSync" to="Video" method="_on_VSync_toggled"]
+[connection signal="pressed" from="Video/BackFromVideo" to="." method="_on_BackFromVideo_pressed"]
+[connection signal="value_changed" from="Audio/HBoxContainer/Slider/Music" to="Audio" method="_on_Music_value_changed"]
+[connection signal="value_changed" from="Audio/HBoxContainer/Slider/SoundFX" to="Audio" method="_on_Sound_FX_value_changed"]
+[connection signal="pressed" from="Audio/BackFromAudio" to="." method="_on_BackFromAudio_pressed"]
