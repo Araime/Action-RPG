@@ -1,6 +1,10 @@
 # Skeleton Journey.
 Прототип игры про лиса, который бродит по уровню и сражается с врагами.
-Проект собран по гайдам канала [Heartbeast](https://www.youtube.com/@uheartbeast).
+Проект собран по гайдам канала [Heartbeast](https://www.youtube.com/@uheartbeast).  
+
+https://github.com/Araime/Action-RPG/assets/82653875/2525d5e3-bb8d-46a0-a5d6-a4f9f6df1fbc
+
+https://github.com/Araime/Action-RPG/assets/82653875/825b494b-437b-4a2c-9bd0-97fc72d31bf4
 
 # Реализовано:
 
