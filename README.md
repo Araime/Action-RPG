@@ -1,4 +1,4 @@
-# Skeleton Journey.
+# Action RPG
 Прототип игры про лиса, который бродит по уровню и сражается с врагами.
 Проект собран по гайдам канала [Heartbeast](https://www.youtube.com/@uheartbeast).  
 
