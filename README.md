@@ -14,7 +14,7 @@ https://github.com/Araime/Action-RPG/assets/82653875/825b494b-437b-4a2c-9bd0-97f
 
 ### Скачать релиз для Windows(Beta)
 
-Можно скачать 2 файла по [ссылке]().
+Можно скачать 2 файла по [ссылке](https://github.com/Araime/Action-RPG/releases).
 
 ### Скачать исходный код
 
