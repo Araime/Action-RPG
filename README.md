@@ -20,14 +20,14 @@ https://github.com/Araime/Action-RPG/assets/82653875/825b494b-437b-4a2c-9bd0-97f
 
 Godot 3.5.2 должен быть уже установлен.
 
-[Скачать - Оригинал](https://github.com/Araime/Action-RPG/archive/master.zip) этот репозиторий на ваш компьютер. 
+[Скачать](https://github.com/Araime/Action-RPG/archive/master.zip) этот репозиторий на ваш компьютер. 
 Репозиторий включает все необходимые ресурсы.
 
 ### Запуск
 
 Укажите путь до файла `project.godot` в папке репозитория, откройте проект и запустите его.
 
-## Благодарности
+## Ресурсы
 - Музыка:  
 	- `меню и уровни` alkacrab.
 
