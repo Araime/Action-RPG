@@ -6,6 +6,13 @@ https://github.com/Araime/Action-RPG/assets/82653875/2525d5e3-bb8d-46a0-a5d6-a4f
 
 https://github.com/Araime/Action-RPG/assets/82653875/825b494b-437b-4a2c-9bd0-97fc72d31bf4
 
+# Управление:
+
+`Arrows` - ходьба.  
+`E` - атака.  
+`Space` - перекат.  
+`Esc` - выход.  
+
 # Реализовано:
 
 Враги, Атаки, Смерти, Главное меню, Настройки игры.  
